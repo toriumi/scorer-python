@@ -1,0 +1,1 @@
+tesseract tesseng2.jpg stdout --tessdata-dir ~/tessdata -l eng

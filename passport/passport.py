@@ -14,7 +14,7 @@ args = sys.argv
 
 thresh = 170
 minarea = 600
-maxarea = 5000
+maxarea = 1500
 
 if len(args) > 3:
 	thresh = int(args[1])
@@ -33,7 +33,7 @@ th3 = cv2.adaptiveThreshold(bgr,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BI
 """
 th3 = cv2.cvtColor(th3, cv2.COLOR_GRAY2BGR)
 th3 = cv2.blur(th3, ksize=(5,5))
-th3 = cv2.cvtColor(th3, cv2.COLOR_BGR2GRAY)
+th3 = cv2.cvtColor(th3, cv2.COLOR_BGR2GRAY)て
 """
 #binary_img4 = cv2.cvtColor(th3, cv2.COLOR_GRAY2BGR)
 im4, contours4, hierarchy4 = cv2.findContours(th3,cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
@@ -70,14 +70,15 @@ for i, cnt4 in enumerate(contours4):
         flag="true"
             
     if flag == "true":
-        x0,y0,w0,h0 = cv2.boundingRect(cnt4)
-        cv2.rectangle(th3,(x0,y0),(x0+w0,y0+h0),(255,255,255), -1)
+        cv2.drawContours( th3, contours4, i, (255,255,255), -1)
+        #x0,y0,w0,h0 = cv2.boundingRect(cnt4)
+        #cv2.rectangle(th3,(x0,y0),(x0+w0,y0+h0),(255,255,255), -1)
                 
 
 cv2.rectangle(img,(roi_x,roi_y),(roi_x+roi_w,roi_y+roi_h),(0,127,255),3)
 
 th3 = th3[roi_y:roi_y+roi_h, roi_x:roi_x+roi_w]
-th3 = cv2.resize(th3,(int(roi_w/2),int(roi_h/2)))
+#th3 = cv2.resize(th3,(int(roi_w/2),int(roi_h/2)))
 cv2.imwrite("result.jpg",img)
 cv2.imwrite("binary.jpg",th3)
 
