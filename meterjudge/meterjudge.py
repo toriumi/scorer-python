@@ -13,7 +13,7 @@ if __name__ == '__main__':
     
     # 画像の読み込み
     img_src1 = cv2.imread("meter_0.png", 0)
-    img_src2 = cv2.imread("meter_43_5.png", 0)
+    img_src2 = cv2.imread("meter_60.png", 0)
     height, width = img_src1.shape[:2]
     # 背景画像との差分を算出
     img_diff = cv2.absdiff(img_src2, img_src1)
@@ -44,16 +44,22 @@ if __name__ == '__main__':
                 dst[y, x] = colors[labelImage[y, x]]
             else:
                 dst[y, x] = [0, 0, 0]
+    thetadiff=[180,-180]
     for j in range(1, nLabels + 1):
         x,y,w,h,size = contours[j-1]
         if rangeval[0] < size < rangeval[1]:
             x,y = GoCs[j-1]
-            theta = int(math.atan2(int(x)-center[0],int(y)-center[1])*180/math.pi)
-            print("theta="+str(theta))
+            theta = int(math.atan2(int(x)-center[0],-int(y)+center[1])*180/math.pi)
+            if theta > thetadiff[1]:
+                thetadiff[1]=theta
+            if theta < thetadiff[0]:
+                thetadiff[0]=theta
+            print("theta = "+str(theta))
             dst = cv2.circle(dst, (int(x),int(y)), 2, (0,0,255), -1)
             img_src1=cv2.line(img_src1, (center[0],center[1]),(int(x),int(y)), (255,0,0), 5)
 
     # 表示
+    print("diff = "+str(thetadiff[1]-thetadiff[0]))
     cv2.imwrite("imgdist.png", dst)
     cv2.imwrite("imgorg1.png", img_src1)
     cv2.imwrite("result.png", img_diffm)
