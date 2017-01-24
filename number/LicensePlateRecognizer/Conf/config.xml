@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<detector_file>"../Conf/cascade_lbp.xml"</detector_file>
+<shape_predictor_file>"../Conf/plate_shape.dat"</shape_predictor_file>
+<car_number_file>"../Conf/car_number_filter.txt"</car_number_file>
+<car_number_id_file>"../Conf/car_number_id.csv"</car_number_id_file>
+<class_number_file>"../Conf/class_number_filter.txt"</class_number_file>
+<class_number_id_file>"../Conf/class_number_id.csv"</class_number_id_file>
+<hiragana_file>"../Conf/hiragana_filter.txt"</hiragana_file>
+<hiragana_id_file>"../Conf/hiragana_id.csv"</hiragana_id_file>
+<local_name_file>"../Conf/local_name_filter.txt"</local_name_file>
+<local_name_id_file>"../Conf/local_name_id.csv"</local_name_id_file>
+<proc_width>1024</proc_width>
+<min_plate_width>200</min_plate_width>
+<max_plate_width>1024</max_plate_width>
+<search_region>
+  100 100 500 500</search_region>
+<num_detect>1</num_detect>
+<threshold>0.20</threshold>
+<invert_image>1</invert_image>
+</opencv_storage>

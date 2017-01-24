@@ -1,0 +1,15 @@
+/usr/local/lib/libLPRecogLib.so.2.0.0
+/usr/local/lib/libLPRecogLib.so.1
+/usr/local/lib/libLPRecogLib.so
+/usr/local/include/LPRecogLib.h
+/usr/local/include/LPRecog.h
+/usr/local/include/CharRecognition.h
+/usr/local/include/Exception.h
+/usr/local/include/LicensePlateInfo.h
+/usr/local/include/PlateDetection.h
+/usr/local/include/PlateSegmentation.h
+/usr/local/include/shape/shape_predictor.h
+/usr/local/include/shape/binary_func.h
+/usr/local/include/HMAX/HMAX.h
+/usr/local/include/HMAX/S1.h
+/usr/local/include/HMAX/C1.h

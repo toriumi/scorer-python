@@ -1,0 +1,11 @@
+学習機能等なしで、最低限の認識機能を動かすために必要なファイル
+・LPRecog.*
+・CharRecognition.*
+・Exception.*
+・LicensePlateInfo.*
+・PlateDetection.*
+・PlateSegmentation.*
+・common/*
+・HMAX/*
+・shape/shape_predictor.*
+・shape/binary_func.*
