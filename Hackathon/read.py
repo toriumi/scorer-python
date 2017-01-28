@@ -74,7 +74,7 @@ while True:
         sleep(2)
         date_num = date.timestamp()
         date_str = date.strftime("%Y%m%d%H%M%S")
-        subprocess.check_call("fswebcam -i 0 -d /dev/video1 --no-banner -r 1280x720 ./image/"+date_str+"_"+firstcode+"_"+secondcode+"_.jpg", shell=True)
+        subprocess.check_call("fswebcam --skip 5 -i 0 -d /dev/video1 --no-banner -r 1280x720 ./image/"+date_str+"_"+firstcode+"_"+secondcode+"_.jpg", shell=True)
         sleep(5)
         
         #subprocess.check_call("scp -r ~/scorer-python/Hackathon/image book.com:/home/shintashinta/www/image", shell=True)
