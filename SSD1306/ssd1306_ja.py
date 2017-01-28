@@ -34,7 +34,7 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 
 # Misaki Font, awesome 8x8 pixel Japanese font, can be downloaded from the following URL.
 # $ wget http://www.geocities.jp/littlimi/arc/misaki/misaki_ttf_2015-04-10.zip
-font = ImageFont.truetype('font/misakifont/misaki_gothic.ttf', 8, encoding='unic')
+font = ImageFont.truetype('font/misakifont/misaki_gothic.ttf', 16, encoding='unic')
 
 # Un-comment out the following line if you want to use the default font instead of Misaki Font
 # font = ImageFont.load_default()
@@ -42,9 +42,9 @@ font = ImageFont.truetype('font/misakifont/misaki_gothic.ttf', 8, encoding='unic
 # Write two lines of text.
 x=0
 y=0
-for str in [ u'最近の研究から、地球上のカミナ', u'リ雲でも電子が高いエネルギーに', u'まで「加速」されている証拠が見', u'つかってきました。加速された電', u'子が大気分子と衝突することで生', u'じるガンマ線がカミナリ雲からビ', u'ーム状に放出されていることがわ', u'かったのです！  →   thdr.info' ]:
+for str in [ u'Future Standard', u'フューチャー', u'スタンダード', u'本郷' ]:
 	draw.text((x,y), str, font=font, fill=255)
-	y+=8
+	y+=16
 
 disp.image(image)
 disp.display()
