@@ -3,8 +3,8 @@
 import bottlenose
 from bs4 import BeautifulSoup
   
-ACCESS_KEY = "AKIAIWQNQUZPKIW626AQ"
-SECRET_ACCESS_KEY = "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"
+ACCESS_KEY = ""
+SECRET_ACCESS_KEY = ""
 ASSOCIATE_TAG = "clonet-22"
  
 amazon = bottlenose.Amazon(ACCESS_KEY, SECRET_ACCESS_KEY, ASSOCIATE_TAG, Region="JP")
@@ -17,8 +17,8 @@ print(soup.find('item').prettify())
 """
 from amazon.api import AmazonAPI
  
-ACCESS_KEY = "AKIAIWQNQUZPKIW626AQ"
-SECRET_ACCESS_KEY = "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"
+ACCESS_KEY = ""
+SECRET_ACCESS_KEY = ""
 ASSOCIATE_TAG = "****"
  
 amazon = AmazonAPI(ACCESS_KEY, SECRET_ACCESS_KEY, ASSOCIATE_TAG, region="JP")
